@@ -7,7 +7,7 @@
   "scripts": {
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm publish"
   },
-  "keywords": [],
+  "keywords": ["dynamodb", "aws-dynamo", "dynamo-cli"],
   "author": "rampoo",
   "license": "ISC",
   "dependencies": {
