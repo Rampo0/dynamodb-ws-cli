@@ -1,1 +1,5 @@
-export * from './src/helper';
+const helper = require('./src/helper');
+
+module.exports = {
+    ...helper
+};
