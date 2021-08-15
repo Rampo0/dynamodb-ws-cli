@@ -1,13 +1,17 @@
 {
   "name": "dynamodb-ws-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A workspace to work with DynamoDB",
   "main": "index.js",
   "bin": "./commands.js",
   "scripts": {
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm publish"
   },
-  "keywords": ["dynamodb", "aws-dynamo", "dynamo-cli"],
+  "keywords": [
+    "dynamodb",
+    "aws-dynamo",
+    "dynamo-cli"
+  ],
   "author": "rampoo",
   "license": "ISC",
   "dependencies": {
