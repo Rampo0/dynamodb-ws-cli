@@ -1,0 +1,35 @@
+{
+  "name": "dynamodb-ws-cli",
+  "version": "1.0.0",
+  "description": "A workspace to work with DynamoDB",
+  "main": "index.js",
+  "bin": "./commands.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "rampoo",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.968.0",
+    "commander": "^7.2.0",
+    "inquirer": "^8.1.1",
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^8.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rampo0/dynamodb-ws-cli.git"
+  },
+  "homepage": "https://github.com/Rampo0/dynamodb-ws-cli#readme",
+  "bugs": {
+    "url": "https://github.com/Rampo0/dynamodb-ws-cli/issues"
+  }
+}
