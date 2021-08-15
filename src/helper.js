@@ -51,7 +51,7 @@ const getData = async (table, primary, trxQuery) => {
     return tempData;
 };
 
-export {
+module.exports = {
     readXlsx,
     getAllDataFromDynamo,
     toExcel,
