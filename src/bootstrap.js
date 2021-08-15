@@ -1,21 +1,12 @@
-const { MongoClient } = require('mongodb');
-const { Client } = require('pg');
+const AWS = require('aws-sdk');
 
-module.exports = async (pg, mongodb, scriptFunc) => {
-    const mongoClient = new MongoClient(mongodb.uri, mongodb.options);
-    const pgClient = new Client(pg);
+module.exports = async (awsConfig, dynamoConfig, scriptFunc) => {
+    const dynamodb = new AWS.DynamoDB.DocumentClient(dynamoConfig);
+    AWS.config.update(awsConfig);
 
     try {
-        await mongoClient.connect();
-
-        await mongoClient.db('admin').command({ ping: 1 });
-
-        await pgClient.connect();
-
-        await scriptFunc(mongoClient, pgClient);
+        await scriptFunc(dynamodb);
     } finally {
         // Ensures that the client will close when you finish/error
-        await mongoClient.close();
-        await pgClient.end();
     }
 };

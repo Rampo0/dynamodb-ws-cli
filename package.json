@@ -4,7 +4,9 @@
   "description": "A workspace to work with DynamoDB",
   "main": "index.js",
   "bin": "./commands.js",
-  "scripts": {},
+  "scripts": {
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm publish"
+  },
   "keywords": [],
   "author": "rampoo",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "xlsx": "^0.17.0"
   },
   "devDependencies": {
+    "del-cli": "^3.0.1",
     "eslint": "^7.4.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",

@@ -3,7 +3,7 @@
 const program = require('commander');
 const { runAction } = require('./actions');
 
-program.version('1.0.0').description('Postgres and MongoDB workspace');
+program.version('1.0.0').description('DynamoDB workspace');
 
 program
     .command('run <filename>')
