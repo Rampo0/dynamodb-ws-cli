@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 
 module.exports = async (awsConfig, dynamoConfig, scriptFunc) => {
     const dynamodb = new AWS.DynamoDB.DocumentClient(dynamoConfig);
-    const client = new AWS.DynamoDB({ apiVersion: '2012-08-10' });
+    const client = new AWS.DynamoDB(dynamoConfig);
     AWS.config.update(awsConfig);
 
     try {
