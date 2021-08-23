@@ -2,10 +2,11 @@ const AWS = require('aws-sdk');
 
 module.exports = async (awsConfig, dynamoConfig, scriptFunc) => {
     const dynamodb = new AWS.DynamoDB.DocumentClient(dynamoConfig);
+    const client = new AWS.DynamoDB();
     AWS.config.update(awsConfig);
 
     try {
-        await scriptFunc(dynamodb);
+        await scriptFunc(dynamodb, client);
     } finally {
         // Ensures that the client will close when you finish/error
     }
