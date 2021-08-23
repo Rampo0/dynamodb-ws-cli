@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-ws-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A workspace to work with DynamoDB",
   "main": "index.js",
   "bin": "./commands.js",
