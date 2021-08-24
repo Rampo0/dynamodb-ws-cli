@@ -6,7 +6,7 @@ module.exports = async (awsConfig, dynamoConfig, scriptFunc) => {
     AWS.config.update(awsConfig);
 
     try {
-        await scriptFunc(dynamodb, client);
+        await scriptFunc(dynamodb, client, AWS);
     } finally {
         // Ensures that the client will close when you finish/error
     }
